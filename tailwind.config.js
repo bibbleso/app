@@ -9,6 +9,16 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    ringColor: {
+      first: 'var(--text-first)',
+      second: 'var(--text-second)',
+      third: 'var(--color-third)',
+    },
+    ringOffsetColor: {
+      first: 'var(--color-first)',
+      second: 'var(--color-second)',
+      third: 'var(--color-third)',
+    },
     outlineColor: {
       first: 'var(--text-first)',
       second: 'var(--text-second)',
