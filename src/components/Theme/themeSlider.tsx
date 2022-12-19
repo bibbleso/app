@@ -35,9 +35,9 @@ const ThemeSlider = () => {
   return (
     <div
       ref={sliderRef}
-      className={`scroll-smooth will-change-scroll snap-mandatory snap-x w-[100%] overflow-y-hidden overflow-x-scroll border-solid border-t-[0.05em]`}>
+      className={`scroll-smooth will-change-scroll snap-mandatory snap-x w-[100%] overflow-y-hidden overflow-x-scroll border-solid border-third border-t-[0.02em] no-scrollbar`}>
       <div
-        className={`pl-[50%] flex flex-row justify-start items-center w-[1000px] h-[60px] space-x-[50px]`}>
+        className={`pl-[50%] flex flex-row justify-start items-center w-[200%] h-[60px] space-x-[50px]`}>
         {slider()}
       </div>
     </div>

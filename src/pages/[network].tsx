@@ -73,11 +73,12 @@ const Network: NextPage = ({ data }: any) => {
   return (
     <>
       <Head>
-        <title>My page title</title>
+        <title>{data?.name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div
-        className={`bg-first h-screen w-screen flex flex-col justify-center font-mono overflow-y-hidden`}>
+        className={`bg-first h-screen w-screen flex flex-col justify-center items-center font-mono overflow-hidden select-none text-7xl font-next text-first`}>
+        <Header back={true} />
         <AnimatePresence>
           {show ? (
             <motion.div
@@ -85,12 +86,71 @@ const Network: NextPage = ({ data }: any) => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="text-first text-md text-center font-montserrat tracking-widest select-none">
-              {data?.name}
+              className={`pr-4 pl-4 w-[100%] max-w-lg grow flex flex-col align-top overflow-hidden`}>
+              <div className="pt-3 pb-3 space-y-2 pr-3 pl-3">
+                <div className="text-lg text-center tracking-widest pb-2">
+                  {data?.name}
+                </div>
+                <div className="text-xs text-center tracking-widest">
+                  {data?.desc}
+                </div>
+              </div>
+
+              <div className={`overflow-y-auto overflow-x-hidden`}>
+                <div className="flex flex-row border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3 uppercase">
+                  <div className="grow">network id</div>
+                  <div className="">{data?.id ? data.id : 'null'}</div>
+                </div>
+
+                {/* Docs */}
+                <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3 ">
+                  <div className="grow uppercase">docs</div>
+                  <div className="pl-3">{data?.docs}</div>
+                </div>
+
+                {/* RPC */}
+                <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3 ">
+                  <div className="grow uppercase">rpc</div>
+                  <div className="pl-3">{data?.rpc}</div>
+                </div>
+
+                {/* WSS */}
+                <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3">
+                  <div className="grow uppercase">wss</div>
+                  <div className="pl-3">{data?.wss}</div>
+                </div>
+
+                {/* explorer */}
+                <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3">
+                  <div className="grow uppercase">explorer</div>
+                  <div className="pl-3">{data?.explorer}</div>
+                </div>
+
+                {/* repo */}
+                <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3">
+                  <div className="grow uppercase">repo</div>
+                  <div className="pl-3">{data?.repo}</div>
+                </div>
+
+                {/* UNL */}
+                {data?.vl ? (
+                  <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3">
+                    <div className="grow uppercase">unl</div>
+                    <div className="pl-3">{JSON.stringify(data?.vl)}</div>
+                  </div>
+                ) : null}
+
+                {/* peers */}
+                {data?.peers ? (
+                  <div className="flex flex-col border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3">
+                    <div className="grow uppercase">peers</div>
+                    <div className="pl-3">{JSON.stringify(data?.peers)}</div>
+                  </div>
+                ) : null}
+              </div>
             </motion.div>
           ) : null}
         </AnimatePresence>
-        <div className={`p-5 grow overflow-y-auto`}></div>
         <ThemeSlider></ThemeSlider>
       </div>
     </>

@@ -19,6 +19,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import { container, items, fadeIn } from 'src/components/Animations';
 import Head from 'next/head';
+import Header from 'src/components/Header';
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -55,11 +56,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>My page title</title>
+        <title>Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div
         className={`bg-first flex h-screen w-screen flex-col justify-center font-mono`}>
+        <Header back={false} />
         <AnimatePresence>
           {show ? (
             <motion.div
@@ -67,7 +69,7 @@ const Home: NextPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`flex flex-col justify-end h-[160px] p-5 pt-8`}>
+              className={`flex flex-col justify-end h-fit p-5 pt-8`}>
               <h1 className="text-first text-4xl text-center font-lobster select-none">
                 bibble
               </h1>
@@ -84,7 +86,7 @@ const Home: NextPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`p-5 grow overflow-y-auto`}>
+              className={`p-5 grow overflow-y-auto font-montserrat text-sm font-thin`}>
               {buttons()}
             </motion.div>
           ) : null}

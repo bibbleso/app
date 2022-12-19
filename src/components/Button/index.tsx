@@ -81,15 +81,7 @@ const Index = ({
     <div className={className}>
       <div
         ref={buttonRef}
-        className={`text-first ${styles[buttonType]} ${styles[themeStyle]}`}
-        style={{
-          width: width,
-          height: height,
-          margin: margin,
-          borderRadius: border?.radius,
-          borderColor: border?.color,
-          ...style,
-        }}
+        className={`text-first border flex items-center justify-center h-[48px] w-[260px] rounded-lg border-first`}
         onClick={handleClick}>
         {buttonType === 'dropdown' ? (
           <div className={styles.drop}>

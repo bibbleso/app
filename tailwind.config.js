@@ -9,6 +9,16 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    stroke: {
+      first: 'var(--text-first)',
+      second: 'var(--text-second)',
+      third: 'var(--color-third)',
+    },
+    borderColor: {
+      first: 'var(--text-first)',
+      second: 'var(--text-second)',
+      third: 'var(--color-third)',
+    },
     ringColor: {
       first: 'var(--text-first)',
       second: 'var(--text-second)',

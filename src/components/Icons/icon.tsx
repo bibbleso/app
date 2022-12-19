@@ -10,6 +10,7 @@ interface Props {
   height?: string;
   width?: string;
   hoverColor?: string;
+  className?: string;
 }
 
 const Icon = ({
@@ -21,17 +22,15 @@ const Icon = ({
   height,
   width,
   hoverColor,
+  className,
   ...rest
 }: Props) => {
   const Icon = iconMap[name];
-  const h = height ? height : size;
-  const w = width ? width : size;
 
   return (
     <Icon
       ref={ref}
-      className="fill-first"
-      style={{ width: w, height: h, ...style }}
+      className={`fill-first stroke-first ${className}`}
       {...rest}
     />
   );
