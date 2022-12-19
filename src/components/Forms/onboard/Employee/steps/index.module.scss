@@ -1,0 +1,379 @@
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  flex-basis: 0;
+
+  padding: 40px;
+
+  font-family: Montserrat;
+
+  .instruction {
+    font-size: 11px;
+    color: rgb(197, 197, 197);
+    font-variation-settings: 'wght' 500;
+    letter-spacing: 0.6px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    width: 80%;
+    max-width: 350px;
+
+    margin: 4px 0;
+    padding: 20px;
+
+    &:hover {
+      background-color: rgb(248, 248, 248);
+      border: #6e30d7ff solid 1.5px;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 18.5px;
+
+      .wrapper {
+        .title {
+          color: #6e30d7ff;
+        }
+      }
+    }
+
+    .logo {
+      margin-right: 20px;
+
+      svg {
+        stroke-width: 2px;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+
+      .title {
+        color: rgb(43, 43, 43);
+        font-variation-settings: 'wght' 600;
+        width: fit-content;
+      }
+
+      .description {
+        font-size: 11px;
+        color: rgb(197, 197, 197);
+        font-variation-settings: 'wght' 500;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}
+
+.walletInputModal {
+  padding: 0 40px;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .completeHeader {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-variation-settings: 'wght' 500;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+  }
+
+  .completeTitle {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-variation-settings: 'wght' 700;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+  }
+
+  .instruction {
+    font-size: 11px;
+    color: rgb(197, 197, 197);
+    font-variation-settings: 'wght' 500;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
+
+    &.bottom {
+      margin-bottom: 12px;
+    }
+    &.top {
+      margin-top: 12px;
+    }
+  }
+
+  .fullButtonContainer {
+    margin: 8px 0;
+    margin-bottom: 20px;
+  }
+
+  .inputFullContainer {
+    margin: 8px 0;
+
+    font-family: Montserrat;
+    font-variation-settings: 'wght' 600;
+    font-size: 11px;
+
+    justify-content: center;
+    padding-top: 10px;
+
+    .inputFullTitle {
+      width: 100%;
+      font-family: Montserrat;
+      font-variation-settings: 'wght' 600;
+      font-size: 11px;
+
+      justify-content: center;
+    }
+  }
+
+  .inputContainer {
+    padding: 0px 0px;
+
+    margin: 8px 0;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    font-family: Montserrat;
+    font-variation-settings: 'wght' 600;
+    font-size: 11px;
+
+    justify-content: center;
+
+    .inputTitle {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .buttonContainer {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+
+    margin: 20px;
+    margin-right: 0;
+
+    .button {
+      width: 150px;
+      font-size: 12px;
+      font-family: Montserrat;
+      font-variation-settings: 'wght' 700;
+    }
+  }
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+  color: #6e30d7ff;
+  width: 80%;
+
+  .headerBar {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 14px;
+
+    background-color: #6e30d7ff;
+  }
+
+  .logoContainer {
+    margin: 0;
+    line-height: 1;
+    font-size: 3.5rem;
+    width: fit-content;
+    position: absolute;
+
+    top: 6px;
+    left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    a {
+      color: #2c2c2c;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .title {
+      width: 84px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 10px;
+
+    width: 100%;
+    padding-top: 15px;
+
+    .instruction {
+      font-size: 11px;
+      color: rgb(197, 197, 197);
+      font-variation-settings: 'wght' 500;
+      letter-spacing: 0.6px;
+      padding-bottom: 25px;
+    }
+
+    .title {
+      width: 100%;
+      text-align: left;
+      color: black;
+      font-family: Montserrat;
+      font-variation-settings: 'wght' 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      width: 100%;
+      text-align: left;
+      font-size: 12px;
+      font-family: Montserrat;
+      font-variation-settings: 'wght' 400;
+      color: rgb(37, 37, 37);
+      margin-bottom: 50px;
+    }
+
+    .input {
+      margin-bottom: 24px;
+      width: 80%;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 18px;
+        height: 18px;
+
+        .profile {
+          stroke-width: 0;
+
+          &:hover {
+            cursor: default;
+          }
+        }
+
+        svg {
+          stroke: #6e30d7ff;
+          stroke-width: 2;
+          fill: #6e30d7ff;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .forgot {
+        margin-top: 6px;
+        text-align: end;
+        font-size: 10px;
+        margin-bottom: 4px;
+        color: black;
+        font-family: Montserrat;
+        font-variation-settings: 'wght' 400;
+
+        user-select: none;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .signup {
+      font-size: 10px;
+      width: 100%;
+      text-align: center;
+      color: black;
+      font-family: Montserrat;
+      font-variation-settings: 'wght' 400;
+      margin-top: 6px;
+
+      user-select: none;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .disable {
+      opacity: 0.25;
+      pointer-events: none;
+      user-select: none;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      .button {
+        width: 80%;
+      }
+    }
+
+    .active {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      .button {
+        width: 80%;
+      }
+    }
+
+    .buttonContainer {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+
+      .button {
+        width: 80%;
+        font-size: 12px;
+        font-family: Montserrat;
+        font-variation-settings: 'wght' 700;
+      }
+    }
+  }
+}

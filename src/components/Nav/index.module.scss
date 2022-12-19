@@ -1,0 +1,145 @@
+@import '../../styles/scss/default/variables';
+
+.panel {
+  position: relative;
+  height: 100vh;
+  width: fit-content;
+  background-color: white;
+  border: #6e30d7ff 1px solid;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: none;
+  flex-shrink: 0;
+
+  .secondary {
+    flex-grow: 1;
+  }
+
+  .bgHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6e30d7ff;
+
+    height: 48px;
+    width: 100%;
+  }
+
+  .logoHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .logo {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+    }
+    .title {
+      margin-left: 6px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 84px;
+      height: 100%;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: #6e30d7ff;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .primary,
+  .secondary,
+  .bottom {
+    .item {
+      margin-bottom: 2px;
+      .category {
+        box-sizing: border-box;
+        height: fit-content;
+        padding: 6px 8px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        .icon {
+          padding: 0;
+
+          width: fit-content;
+
+          display: flex;
+          justify-content: left;
+
+          fill: #6e30d7ff;
+          stroke: #6e30d7ff;
+
+          &.thumbnail {
+            margin-left: -2px;
+          }
+
+          &.rotate {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .text {
+          margin-left: 4px;
+          width: 100%;
+          text-align: left;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .items {
+    color: #6e30d7ff;
+    &:hover {
+      cursor: pointer;
+    }
+    div {
+      font-family: Montserrat;
+      width: 100%;
+      height: fit-content;
+      font-size: 16px;
+      margin: 6px 0;
+      padding: 0px 6px;
+      border-radius: 10px;
+    }
+
+    .active {
+      background-color: #6e30d7ff;
+      color: white;
+
+      svg {
+        stroke: white;
+        fill: white;
+      }
+    }
+  }
+}

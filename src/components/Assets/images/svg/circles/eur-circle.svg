@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 1114.5027 1114.5027" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <desc>European flag</desc>
+ <defs>
+  <g id="s">
+   <g id="c">
+    <path id="t" transform="rotate(18 3.1568758 -.5)" d="m0 0v1h0.5z"/>
+    <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#t"/>
+   </g>
+   <g id="a">
+    <use transform="rotate(72)" width="100%" height="100%" xlink:href="#c"/>
+    <use transform="rotate(144)" width="100%" height="100%" xlink:href="#c"/>
+   </g>
+   <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#a"/>
+  </g>
+ </defs>
+ <circle cx="557.25134" cy="557.25134" r="550.01544" fill="none" stroke="#039" stroke-linecap="round" stroke-width="14.4718" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+ <circle cx="557.25134" cy="557.25134" r="498.12894" fill="#039" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+ <g transform="matrix(43.695701,0,0,43.695701,557.25134,561.42393)" fill="#fc0">
+  <use y="-6" width="100%" height="100%" xlink:href="#s"/>
+  <use y="6" width="100%" height="100%" xlink:href="#s"/>
+  <g id="l-0">
+   <use x="-6" width="100%" height="100%" xlink:href="#s"/>
+   <use transform="rotate(216 -2.3441661 -2.1106967)" width="100%" height="100%" xlink:href="#s"/>
+   <use transform="rotate(144,-2.1106967,-2.3441661)" width="100%" height="100%" xlink:href="#s"/>
+   <use transform="rotate(72,-4.6626491,-2.0759451)" width="100%" height="100%" xlink:href="#s"/>
+   <use transform="rotate(72 -5.0759451 .53350333)" width="100%" height="100%" xlink:href="#s"/>
+  </g>
+  <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#l-0"/>
+ </g>
+</svg>

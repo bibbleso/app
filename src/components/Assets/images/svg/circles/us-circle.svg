@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1114.5027" height="1114.5027" version="1.1" viewBox="0 0 6687.0162 6687.0162" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="clipPath11438-7-1">
+   <circle cx="2985.8647" cy="2005.0818" r="1322.6198" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="86.8308" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  </clipPath>
+ </defs>
+ <circle cx="3343.5081" cy="3343.5081" r="3300.0928" fill="none" stroke="#002f6c" stroke-linecap="round" stroke-width="86.8308" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+ <g transform="matrix(2.2732199,0,0,2.2732199,-3444.019,-1214.4838)" clip-path="url(#clipPath11438-7-1)">
+  <rect width="7410" height="3900" fill="#b22234"/>
+  <path d="m0 450h7410m0 600h-7410m0 600h7410m0 600h-7410m0 600h7410m0 600h-7410" stroke="#fff" stroke-width="300"/>
+  <rect width="2964" height="2100" fill="#3c3b6e"/>
+  <g fill="#fff">
+   <g id="s18-6-0">
+    <g id="s9-6-5">
+     <g id="s5-6-2">
+      <g id="s4-6-0">
+       <path id="s-7-7" d="m247 90 70.53423 217.08204-184.66101-134.16408h228.25356l-184.66101 134.16408z"/>
+       <use y="420" width="100%" height="100%" xlink:href="#s-7-7"/>
+       <use y="840" width="100%" height="100%" xlink:href="#s-7-7"/>
+       <use y="1260" width="100%" height="100%" xlink:href="#s-7-7"/>
+      </g>
+      <use y="1680" width="100%" height="100%" xlink:href="#s-7-7"/>
+     </g>
+     <use x="247" y="210" width="100%" height="100%" xlink:href="#s4-6-0"/>
+    </g>
+    <use x="494" width="100%" height="100%" xlink:href="#s9-6-5"/>
+   </g>
+   <use x="988" width="100%" height="100%" xlink:href="#s18-6-0"/>
+   <use x="1976" width="100%" height="100%" xlink:href="#s9-6-5"/>
+   <use x="2470" width="100%" height="100%" xlink:href="#s5-6-2"/>
+  </g>
+ </g>
+</svg>
