@@ -57,10 +57,13 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=device-dpi"
+        />
       </Head>
       <div
-        className={`bg-first flex h-screen w-screen flex-col justify-center font-mono`}>
+        className={`bg-first flex fixed h-[100%] w-screen flex-col justify-center font-mono`}>
         <Header back={false} />
         <AnimatePresence>
           {show ? (

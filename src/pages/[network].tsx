@@ -80,7 +80,7 @@ const Network: NextPage = ({ data }: any) => {
         />
       </Head>
       <div
-        className={`bg-first h-screen w-screen flex flex-col justify-center items-center font-mono overflow-hidden select-none text-7xl font-next text-first`}>
+        className={`fixed bg-first h-[100%] w-screen flex flex-col justify-center items-center font-mono overflow-hidden select-none text-7xl font-next text-first`}>
         <Header back={true} />
         <AnimatePresence>
           {show ? (
