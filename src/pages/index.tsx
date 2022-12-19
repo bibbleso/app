@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             theme={theme}
             onClick={() => {
               setShow(false);
-              setTimeout(() => router.push(`/${network}`), 300);
+              setTimeout(() => router.push(`/${network}`), 400);
             }}>
             <div>{network}</div>
           </Button>
@@ -69,12 +69,15 @@ const Home: NextPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`flex flex-col justify-end h-fit p-5 pt-8`}>
+              className={`flex flex-col justify-end h-fit p-1 pt-8`}>
               <h1 className="text-first text-4xl text-center font-lobster select-none">
                 bibble
               </h1>
-              <h1 className="text-first text-md text-center font-montserrat tracking-widest select-none">
+              <h1 className="text-first text-md text-center font-montserrat tracking-widest select-none mt-2">
                 a friendly faucet
+              </h1>
+              <h1 className="text-first text-md text-center font-montserrat tracking-widest select-none">
+                {`+ chain directory`}
               </h1>
             </motion.div>
           ) : null}
