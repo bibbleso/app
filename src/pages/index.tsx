@@ -18,7 +18,7 @@ import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { container, items, fadeIn } from 'src/components/Animations';
-import { Head } from 'next/document';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   const router = useRouter();
