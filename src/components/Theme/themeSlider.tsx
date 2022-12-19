@@ -23,7 +23,7 @@ const ThemeSlider = () => {
   const slider = () => {
     return themes.map((theme) => (
       <div
-        className={`snap-center w-fit h-fit outline outline-1 outline-third outline-offset-2 rounded-full`}>
+        className={`snap-center w-fit h-fit rounded-full outline outline-1 outline-third outline-offset-2`}>
         <div
           onClick={() => handleThemeChange(theme)}
           className={`theme-${theme} bg-first rounded-full ${

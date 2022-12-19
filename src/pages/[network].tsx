@@ -72,7 +72,7 @@ const Network: NextPage = ({ data }: any) => {
   }, []);
   return (
     <div
-      className={`bg-first flex h-screen w-screen flex-col justify-center font-mono overflow-y-hidden`}>
+      className={`bg-first h-[100%] w-screen flex flex-col justify-center font-mono overflow-y-hidden`}>
       <AnimatePresence>
         {show ? (
           <motion.div

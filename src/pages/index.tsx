@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             theme={theme}
             onClick={() => {
               setShow(false);
-              setTimeout(() => router.push(`/${network}`), 250);
+              setTimeout(() => router.push(`/${network}`), 300);
             }}>
             <div>{network}</div>
           </Button>
