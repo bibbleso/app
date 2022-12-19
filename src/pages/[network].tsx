@@ -154,7 +154,7 @@ const Network: NextPage = ({ data }: any) => {
             </motion.div>
           ) : null}
         </AnimatePresence>
-        <ThemeSlider></ThemeSlider>
+        <ThemeSlider show={show} button={true}></ThemeSlider>
       </div>
     </>
   );

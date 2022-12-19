@@ -97,7 +97,7 @@ const Home: NextPage = () => {
             </motion.div>
           ) : null}
         </AnimatePresence>
-        <ThemeSlider></ThemeSlider>
+        <ThemeSlider show={show}></ThemeSlider>
       </div>
     </>
   );
