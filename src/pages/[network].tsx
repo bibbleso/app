@@ -71,23 +71,29 @@ const Network: NextPage = ({ data }: any) => {
     setTheme(storeContext.theme[0]);
   }, []);
   return (
-    <div
-      className={`bg-first h-[100%] w-screen flex flex-col justify-center font-mono overflow-y-hidden`}>
-      <AnimatePresence>
-        {show ? (
-          <motion.div
-            variants={flyInRight}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="text-first text-md text-center font-montserrat tracking-widest select-none">
-            {data?.name}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-      <div className={`p-5 grow overflow-y-auto`}></div>
-      <ThemeSlider></ThemeSlider>
-    </div>
+    <>
+      <Head>
+        <title>My page title</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div
+        className={`bg-first h-screen w-screen flex flex-col justify-center font-mono overflow-y-hidden`}>
+        <AnimatePresence>
+          {show ? (
+            <motion.div
+              variants={flyInRight}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="text-first text-md text-center font-montserrat tracking-widest select-none">
+              {data?.name}
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+        <div className={`p-5 grow overflow-y-auto`}></div>
+        <ThemeSlider></ThemeSlider>
+      </div>
+    </>
   );
 };
 

@@ -18,6 +18,7 @@ import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { container, items, fadeIn } from 'src/components/Animations';
+import { Head } from 'next/document';
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -52,39 +53,45 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div
-      className={`bg-first flex h-screen w-screen flex-col justify-center font-mono`}>
-      <AnimatePresence>
-        {show ? (
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className={`flex flex-col justify-end h-[160px] p-5 pt-8`}>
-            <h1 className="text-first text-4xl text-center font-lobster select-none">
-              bibble
-            </h1>
-            <h1 className="text-first text-md text-center font-montserrat tracking-widest select-none">
-              a friendly faucet
-            </h1>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-      <AnimatePresence>
-        {show ? (
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className={`p-5 grow overflow-y-auto`}>
-            {buttons()}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-      <ThemeSlider></ThemeSlider>
-    </div>
+    <>
+      <Head>
+        <title>My page title</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div
+        className={`bg-first flex h-screen w-screen flex-col justify-center font-mono`}>
+        <AnimatePresence>
+          {show ? (
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className={`flex flex-col justify-end h-[160px] p-5 pt-8`}>
+              <h1 className="text-first text-4xl text-center font-lobster select-none">
+                bibble
+              </h1>
+              <h1 className="text-first text-md text-center font-montserrat tracking-widest select-none">
+                a friendly faucet
+              </h1>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+        <AnimatePresence>
+          {show ? (
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className={`p-5 grow overflow-y-auto`}>
+              {buttons()}
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+        <ThemeSlider></ThemeSlider>
+      </div>
+    </>
   );
 };
 
