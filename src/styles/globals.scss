@@ -5,7 +5,12 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+
+  // Height fix on mobile
+  height: -webkit-fill-available;
+  height: -moz-available;
+
+  //height: calc(var(--vh, 1vh) * 100);
 }
 
 a {

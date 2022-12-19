@@ -74,7 +74,10 @@ const Network: NextPage = ({ data }: any) => {
     <>
       <Head>
         <title>{data?.name}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=device-dpi"
+        />
       </Head>
       <div
         className={`bg-first h-screen w-screen flex flex-col justify-center items-center font-mono overflow-hidden select-none text-7xl font-next text-first`}>
