@@ -69,7 +69,7 @@ const Home: NextPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`flex flex-col justify-end h-fit p-1 pt-8`}>
+              className={`flex flex-col justify-end h-fit p-1 pt-4`}>
               <h1 className="text-first text-4xl text-center font-lobster select-none">
                 bibble
               </h1>
