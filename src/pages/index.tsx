@@ -92,7 +92,7 @@ const Home: NextPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`p-5 grow overflow-y-auto font-montserrat text-sm font-thin`}>
+              className={`p-5 grow overflow-y-auto font-montserrat text-sm font-light`}>
               {buttons()}
             </motion.div>
           ) : null}
