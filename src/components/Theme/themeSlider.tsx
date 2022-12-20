@@ -45,18 +45,22 @@ const ThemeSlider = ({ show }: Props) => {
   };
 
   return (
-    <AnimatePresence>
-      {show ? (
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          className={`pl-[50%] pr-[50%] flex flex-row justify-start items-center w-fit h-[59px]`}>
-          {slider()}
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+    <div
+      ref={sliderRef}
+      className={`scroll-smooth will-change-scroll snap-mandatory snap-x w-full overflow-y-hidden overflow-x-scroll no-scrollbar`}>
+      <AnimatePresence>
+        {show ? (
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className={`pl-[50%] pr-[50%] flex flex-row justify-start items-center w-fit h-[59px]`}>
+            {slider()}
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
   );
 };
 

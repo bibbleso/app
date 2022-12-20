@@ -27,7 +27,7 @@ const Footer = (props: PropsWithChildren) => {
 
   return (
     <div
-      className={`shrink-0 scroll-smooth will-change-scroll snap-mandatory snap-x w-[100%] overflow-y-hidden overflow-x-scroll border-solid border-third border-t-[0.062rem] no-scrollbar min-h-[60px]`}>
+      className={`shrink-0 w-[100%] overflow-hidden border-solid border-third border-t-[0.062rem] min-h-[60px]`}>
       {props.children}
     </div>
   );
