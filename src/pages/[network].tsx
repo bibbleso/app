@@ -106,7 +106,7 @@ const Network: NextPage = ({ data }: any) => {
                 <div className="flex flex-row border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3 uppercase">
                   <div className="grow">network id</div>
                   <div className="">
-                    {_.isNumber(data.id) ? data.id : 'null'}
+                    {_.isNumber(data?.id) ? data.id : 'null'}
                   </div>
                 </div>
 
