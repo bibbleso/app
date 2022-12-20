@@ -4,7 +4,7 @@ import { Sun } from '../Icons';
 import { useStoreContext } from '../../store/context/store';
 import style from './index.module.scss';
 import themes from './scripts/themes.json';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import {
   container,
   items,
@@ -23,21 +23,26 @@ const ThemeSlider = ({ show, button }: Props) => {
   const sliderRef = useRef<any>();
   const [index, setIndex] = useState(themes.indexOf(storeContext.theme[0]));
 
+  const { scrollX } = useScroll({
+    container: sliderRef,
+  });
+
   const handleThemeChange = (theme: string) => {
     storeContext.theme[1](theme);
     setIndex(themes.indexOf(theme));
   };
 
   useEffect(() => {
-    console.log(index);
-    if (sliderRef.current) sliderRef.current.scrollLeft = 80 * index;
-  }, [index]);
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft = 48 + 88 * index;
+    }
+  }, [index, sliderRef.current]);
 
   const slider = () => {
     return themes.map((theme) => (
       <motion.div
         variants={items}
-        className={`snap-center w-fit h-fit rounded-full bg-first ring-1 ring-third ring-offset-4 ring-offset-first`}>
+        className={`snap-center w-fit h-fit rounded-full bg-first ring-1 ring-third ring-offset-4 ring-offset-first mr-7 ml-7`}>
         <div
           onClick={() => handleThemeChange(theme)}
           className={`theme-${theme} bg-first rounded-full ${
@@ -62,7 +67,7 @@ const ThemeSlider = ({ show, button }: Props) => {
               type={'primary'}
               theme={storeContext.theme[0]}
               onClick={() => {}}>
-              <div>fund</div>
+              <div>faucet</div>
             </Button>
           </motion.div>
         ) : null}
@@ -84,7 +89,7 @@ const ThemeSlider = ({ show, button }: Props) => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`pl-[50%] flex flex-row justify-start items-center w-[200%] h-[59px] space-x-[50px]`}>
+              className={`pl-[50%] pr-[50%] flex flex-row justify-start items-center w-fit h-[59px]`}>
               {slider()}
             </motion.div>
           ) : null}

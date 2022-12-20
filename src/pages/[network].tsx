@@ -34,6 +34,7 @@ import {
   flyInLeft,
 } from 'src/components/Animations';
 import ThemeSlider from 'src/components/Theme/themeSlider';
+import _ from 'lodash';
 
 interface IParams extends ParsedUrlQuery {
   network: string;
@@ -102,7 +103,9 @@ const Network: NextPage = ({ data }: any) => {
               <div className={`overflow-y-auto overflow-x-hidden`}>
                 <div className="flex flex-row border-solid text-xs border-first border-t-[0.05em] pr-5 pl-3 pt-3 pb-3 uppercase">
                   <div className="grow">network id</div>
-                  <div className="">{data?.id ? data.id : 'null'}</div>
+                  <div className="">
+                    {_.isNumber(data.id) ? data.id : 'null'}
+                  </div>
                 </div>
 
                 {/* Docs */}

@@ -1,12 +1,12 @@
 export const container = {
-  hidden: { opacity: 1, scale: 0 },
+  /*   hidden: { opacity: 1, scale: 0 },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
       staggerChildren: 0.05,
     },
-  },
+  }, */
   show: {
     opacity: 1,
     scale: 1,
