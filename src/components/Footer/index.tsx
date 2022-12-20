@@ -27,7 +27,7 @@ const Footer = (props: PropsWithChildren) => {
 
   return (
     <div
-      className={`shrink-0 w-[100%] overflow-hidden border-solid border-third border-t-[0.062rem] min-h-[60px]`}>
+      className={`shrink-0 w-[100%] overflow-hidden border-solid border-third border-t-[0.062rem] min-h-[80px] pb-4 pt-1`}>
       {props.children}
     </div>
   );
