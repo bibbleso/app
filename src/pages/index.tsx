@@ -20,6 +20,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { container, items, fadeIn } from 'src/components/Animations';
 import Head from 'next/head';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -97,7 +98,9 @@ const Home: NextPage = () => {
             </motion.div>
           ) : null}
         </AnimatePresence>
-        <ThemeSlider show={show}></ThemeSlider>
+        <Footer>
+          <ThemeSlider show={show}></ThemeSlider>
+        </Footer>
       </div>
     </>
   );

@@ -1,4 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  PropsWithChildren,
+  ReactComponentElement,
+  useEffect,
+  useState,
+} from 'react';
 import styles from './index.module.scss';
 
 import Title from '../Assets/images/svg/thebettermint/boilerplate.svg';
@@ -10,7 +15,7 @@ import { Discord, Facebook, Twitter, Github, Telegram } from '../Icons';
 
 import { useStoreContext } from '../../store/context/store';
 
-const Footer = () => {
+const Footer = (props: PropsWithChildren) => {
   const storeContext = useStoreContext();
 
   const [theme, setTheme] = useState('');
@@ -21,28 +26,10 @@ const Footer = () => {
   }, [storeContext.theme[0]]);
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.tag}>
-        <Title
-          fill={theme === 'dark' ? 'white' : null}
-          width={'90%'}
-          height={42}
-          style={{ margin: '10px' }}
-        />
-
-        <div className={styles.imgWrapper}>
-          <Image src={LinkLogo} height={154} width={668} />
-        </div>
-      </div>
-
-      <div className={styles.socials}>
-        <Discord fill={theme === 'dark' ? 'white' : null} size={24} />
-        <Facebook fill={theme === 'dark' ? 'white' : null} size={24} />
-        <Twitter fill={theme === 'dark' ? 'white' : null} size={24} />
-        <Telegram fill={theme === 'dark' ? 'white' : null} size={24} />
-        <Github fill={theme === 'dark' ? 'white' : null} size={24} />
-      </div>
-    </footer>
+    <div
+      className={`shrink-0 scroll-smooth will-change-scroll snap-mandatory snap-x w-[100%] overflow-y-hidden overflow-x-scroll border-solid border-third border-t-[0.062rem] no-scrollbar min-h-[60px]`}>
+      {props.children}
+    </div>
   );
 };
 

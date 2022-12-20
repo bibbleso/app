@@ -4,7 +4,7 @@ import FormInput from '../Input/FormInput';
 import Button from 'src/components/Button';
 import ModalHeader from './ModalHeader';
 
-const NewAccount = (props: any) => {
+const Sample = (props: any) => {
   const usernameRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -70,4 +70,4 @@ const NewAccount = (props: any) => {
   );
 };
 
-export default NewAccount;
+export default Sample;

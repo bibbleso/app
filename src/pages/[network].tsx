@@ -35,6 +35,8 @@ import {
 } from 'src/components/Animations';
 import ThemeSlider from 'src/components/Theme/themeSlider';
 import _ from 'lodash';
+import FooterButton from 'src/components/Theme/button';
+import Footer from 'src/components/Footer';
 
 interface IParams extends ParsedUrlQuery {
   network: string;
@@ -157,7 +159,9 @@ const Network: NextPage = ({ data }: any) => {
             </motion.div>
           ) : null}
         </AnimatePresence>
-        <ThemeSlider show={show} button={true}></ThemeSlider>
+        <Footer>
+          <FooterButton show={show}></FooterButton>
+        </Footer>
       </div>
     </>
   );
