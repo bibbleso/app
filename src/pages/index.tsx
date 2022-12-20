@@ -64,10 +64,10 @@ const Home: NextPage = () => {
         />
       </Head>
       <div
-        className={`bg-first flex fixed h-[100%] w-screen flex-col justify-center font-mono`}>
+        className={`bg-first flex fixed h-[100%] w-screen flex-col justify-center font-mono transition-colors delay-250`}>
         <Header back={false} />
         <AnimatePresence>
-          {show ? (
+          {show && (
             <motion.div
               variants={fadeIn}
               initial="hidden"
@@ -84,10 +84,10 @@ const Home: NextPage = () => {
                 {`+ chain directory`}
               </h1>
             </motion.div>
-          ) : null}
+          )}
         </AnimatePresence>
         <AnimatePresence>
-          {show ? (
+          {show && (
             <motion.div
               variants={container}
               initial="hidden"
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               className={`p-5 grow overflow-y-auto font-montserrat text-sm font-light`}>
               {buttons()}
             </motion.div>
-          ) : null}
+          )}
         </AnimatePresence>
         <Footer>
           <ThemeSlider show={show}></ThemeSlider>
